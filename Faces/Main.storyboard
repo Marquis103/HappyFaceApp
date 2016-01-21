@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="e5p-Vb-a5f">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Faces View Controller-->
+        <scene sceneID="kXn-0c-jX2">
+            <objects>
+                <viewController id="e5p-Vb-a5f" customClass="FacesViewController" customModule="Faces" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YLh-bN-Hdg"/>
+                        <viewControllerLayoutGuide type="bottom" id="P1D-3S-4Qp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6bT-Hz-moy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="QaM-p1-C1o" customClass="FaceView" customModule="Faces" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="scale">
+                                        <real key="value" value="0.90000000000000002"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="GHt-ov-Yav" appends="YES" id="hOp-EJ-TjR"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QaM-p1-C1o" firstAttribute="bottom" secondItem="P1D-3S-4Qp" secondAttribute="top" id="960-84-uFA"/>
+                            <constraint firstItem="QaM-p1-C1o" firstAttribute="leading" secondItem="6bT-Hz-moy" secondAttribute="leading" id="LAn-3R-lFW"/>
+                            <constraint firstAttribute="trailing" secondItem="QaM-p1-C1o" secondAttribute="trailing" id="hwO-6d-cT6"/>
+                            <constraint firstItem="QaM-p1-C1o" firstAttribute="top" secondItem="6bT-Hz-moy" secondAttribute="top" id="qNu-ut-hRv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="faceView" destination="QaM-p1-C1o" id="RqO-et-Qdo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x2D-xz-zMs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="GHt-ov-Yav">
+                    <connections>
+                        <action selector="changeHappiness:" destination="e5p-Vb-a5f" id="YOf-uS-J9n"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="453" y="424"/>
+        </scene>
+    </scenes>
+</document>
