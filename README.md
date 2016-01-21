@@ -1,7 +1,7 @@
 # HappyFaceApp
-iOS Happiness app allows user to pan gesture happiness level of face
+iOS Happiness app allows user to adjust happiness of face
 
-App uses UIBezierPath to draw a face and provides users two functions throw gestures
+App uses UIBezierPath to draw a face and two gestures to edit face happiness
 * Change the happiness (model) by using a pan gesture
 * Change the size of the face using a pinch gesture
 
