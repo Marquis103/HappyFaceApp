@@ -69,11 +69,6 @@ class FaceView: UIView {
     let eyeVerticalOffset = faceRadius / Scaling.FaceRadiusToEyeOffsetRatio
     let eyeHorizontalSeparation = faceRadius / Scaling.FaceRadiusToEyeSeparationRatio
     
-    print("Face Radius: \(faceRadius)")
-    print ("\(whichEye): \(eyeRadius)")
-    print ("\(whichEye): \(eyeVerticalOffset)")
-    print("\(whichEye): \(eyeHorizontalSeparation)")
-    
     var eyeCenter = faceCenter
     eyeCenter.y -= eyeVerticalOffset
     switch whichEye {
